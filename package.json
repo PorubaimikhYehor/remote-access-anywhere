@@ -1,0 +1,38 @@
+{
+  "name": "remote-access-anywhere",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "remote-access-anywhere",
+    "productName": "YourAppName",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.js",
+      "package.json"      
+    ],
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8"
+  }
+}
